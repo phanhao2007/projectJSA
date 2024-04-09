@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Đăng Ký</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-image: url('./tai_nguyen/74854e2eaa9e234aad9a60f6171890d8.gif');
+            background-size: 100%;
+        }
+
+        form {
+            background-color:  rgba(211, 236, 227, 0.7);
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 300px; /* Adjust the width as needed */
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 16px;
+            box-sizing: border-box;
+        }
+
+        select {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 16px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #4caf50;
+            color: #fff;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <h2>Đăng Ký</h2>
+        <label for="username">Tên đăng nhập:</label>
+        <input type="text" id="username" name="username" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="phone">Số điện thoại:</label>
+        <input type="tel" id="phone" name="phone" required>
+
+        <label for="gender">Giới tính:</label>
+        <select id="gender" name="gender" required>
+            <option value="male">Nam</option>
+            <option value="female">Nữ</option>
+            <option value="other">Khác</option>
+        </select>
+
+        <label for="password">Mật khẩu:</label>
+        <input type="password" id="password" name="password" required>
+
+        <label for="confirmPassword">Nhập lại mật khẩu:</label>
+        <input type="password" id="confirmPassword" name="confirmPassword" required>
+
+        <button type="button" onclick="validateForm()">Đăng Ký</button>
+    </form>
+
+    <script>
+        function validateForm() {
+            // Get values from input fields
+            var username = document.getElementById('username').value;
+            var email = document.getElementById('email').value;
+            var phone = document.getElementById('phone').value;
+            var gender = document.getElementById('gender').value;
+            var password = document.getElementById('password').value;
+            var confirmPassword = document.getElementById('confirmPassword').value;
+// Check if any field is empty
+            if (username === "" || email === "" || phone === "" || gender === "" || password === "" || confirmPassword === "") {
+                alert("Vui lòng điền đầy đủ thông tin.");
+                return;
+            }
+
+            // Check if the username contains only letters and numbers
+            var usernameRegex = /^[a-zA-Z0-9]+$/;
+            if (!usernameRegex.test(username)) {
+                alert("Tên đăng nhập chỉ được chứa chữ và số.");
+                return;
+            }
+
+            // Check if the phone number contains only digits
+            var phoneRegex = /^[0-9]+$/;
+            if (!phoneRegex.test(phone)) {
+                alert("Số điện thoại phải chứa toàn số.");
+                return;
+            }
+
+            // Check if the email has the correct format with @gmail.com
+            var emailRegex = /^[a-zA-Z0-9._-]+@gmail\.com$/;
+            if (!emailRegex.test(email)) {
+                alert("Email phải có định dạng đúng với @gmail.com.");
+                return;
+            }
+
+            // Check if the password and confirm password fields match
+            if (password !== confirmPassword) {
+                alert("Mật khẩu và nhập lại mật khẩu phải giống nhau.");
+                return;
+            }
+
+            // Your additional validation logic here (if needed)
+
+            // If all fields are filled and pass additional checks, proceed with further actions
+            alert("Đăng ký thành công!");
+            // Add code to submit the form or take further actions
+            window.location.href = "dangnhap.html";
+        }
+    </script>
+</body>
+</html>

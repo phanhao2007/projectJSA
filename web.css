@@ -1,0 +1,174 @@
+body{
+  margin: 0;
+  padding: 0;
+}
+#menu {
+  background-color: black;
+    display: flex;
+}
+h1 {
+    text-align: center;
+    font-size: 50px;
+}
+#menu a
+{
+width: 100%;
+font-size: 30px;
+margin-top:  42px;
+}
+#menu a
+{
+list-style: none;
+/* display: inline; */
+}
+.side a {
+    text-decoration: none;
+    color: azure;
+    margin: 20px;
+}
+.bro img {
+    width: 60px;
+    height: 60px;
+}
+#uiui p {
+    display: flex;
+    padding: 100px;
+}
+.side a:hover {
+    color: rgb(94, 73, 73);
+  }
+  .side input[type=text] {
+    float: left;
+    padding: 6px;
+    margin-top: 8px;
+    margin-right: 16px;
+    border: none;
+    font-size: 17px;
+  }
+  img {
+    width: 250px;
+    height: 200px;
+  }
+  #products {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 50px;
+  }
+  .card {
+    padding: 23px;
+  }
+  .container {
+    text-align: center;
+  }
+ 
+  .timkiem {
+    display: flex;
+    margin-left: 300px;
+  }
+  .timkiem input {
+    width: 200px;
+    height: 20px;
+    margin-top: 15px;
+    border-radius: 8px;
+  }
+  .timkiem i {
+    padding: 5px;
+  }
+
+  .uiui {
+    float: right;
+  }
+  .slideshow-container {
+    max-width: 100%;
+    margin: auto;
+  }
+  
+  .slide {
+    display: none;
+    width: 100%;
+    height: auto;
+  }
+  
+  .fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+  
+  @keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+  }
+  #products .card .container button {
+    background-color: white;
+    border: none;
+    border: solid 1px black;
+    margin-top: 14px;
+    padding: 5px 0px;
+    text-transform: uppercase;
+    font-weight: 500;
+    width: 100%;
+    cursor: pointer;
+  }
+  #products .card .container button:hover {
+    background-color: black;
+    color: white;
+  }
+  .kb{
+    background-color: red;
+    width: 100%;
+    height: 300px;
+    background-color: #181818;
+    color: white;
+    border-radius: 10px;
+    display: inline-flex;
+}
+.hu{
+  padding: 50px;
+}
+#products {
+  font-size: 23px;
+}
+.slideshow-container img {
+  width: 100%;
+  height: 600px;
+}
+/* Định dạng cho biểu tượng người dùng và menu dropdown */
+.dropdown {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+/* Ẩn nội dung dropdown */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Định dạng cho từng mục trong menu dropdown */
+.dropdown-content p {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Hiển thị dropdown khi rê chuột hoặc chạm vào */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Thêm một số hiệu ứng khi rê chuột qua các mục */
+.dropdown-content p:hover {
+  background-color: #f1f1f1;
+}
+.dropdown {
+  padding :15px ;
+}
+.dropdown a {
+  text-decoration: none;
+}

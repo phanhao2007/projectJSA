@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="dangnhap.css">
+</head>
+<body>
+    <div class="container">
+        <div id="hao">
+            <form  id="form-login">
+                <h1 class="form-heading"> Đăng Nhập</h1>
+            <div class="hao2">
+                <input type="text" id="tendn" placeholder="Tên đăng nhập" style="border: none; outline: none;  background-color: transparent;width: 400px;">
+            </div>
+            <div class="hao2">
+                <i class=""></i>
+                <input type="password" id="mk" placeholder="Mật khẩu" style="border: none; outline: none;width: 400px;background-color: transparent;">
+                <div id="one">
+                    <i class=""></i>
+                </div>
+            </div>
+            <div class="hao3">
+                <button type="button" onclick="hao()" >Đăng Nhập</button>
+            </div>
+            </form>
+        </div>
+    </div>
+</body>
+<script>
+    function hao() {
+        var username = document.getElementById("tendn").value;
+        var password = document.getElementById("mk").value;
+
+        if (username === "hao2007" && password === "hao2007")
+        {
+            alert ("đăng nhập thành công"); 
+            window.location.href = "index.html";
+        }
+        else {
+            alert("đăng nhập ko thành công ");
+        }
+    }
+</script>
+</html>
