@@ -172,6 +172,6 @@ list-style: none;
 .dropdown a {
   text-decoration: none;
 }
-.container h5 {
-  width: 300px;
+#products .card {
+  padding-left: 70px;
 }
