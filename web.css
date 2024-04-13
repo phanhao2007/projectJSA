@@ -172,3 +172,6 @@ list-style: none;
 .dropdown a {
   text-decoration: none;
 }
+.container h5 {
+  width: 300px;
+}
